@@ -9,7 +9,7 @@ class Conexao:
                 host='localhost', database='C:/ecosis/dados/ecodados.eco',
                 user='sysdba', password='masterkey'
             )
-            print("conectado com sucesso")
+            print("conectado com sucessos")
             return con
         except:
             print("erro de conexao")
