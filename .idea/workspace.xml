@@ -4,13 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="25dd234a-5221-4da7-b1bc-36c091c487bf" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/fbclient.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini.json" afterDir="false" />
+    <list default="true" id="25dd234a-5221-4da7-b1bc-36c091c487bf" name="Changes" comment="melhoria colocando o fbclient e o ini json nas pastas do sistema">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Conexao.py" beforeDir="false" afterPath="$PROJECT_DIR$/Conexao.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EventosDAO.py" beforeDir="false" afterPath="$PROJECT_DIR$/EventosDAO.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SemManifestoDAO.py" beforeDir="false" afterPath="$PROJECT_DIR$/SemManifestoDAO.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -92,6 +88,19 @@
       <option name="presentableId" value="Default" />
       <updated>1702923889521</updated>
     </task>
+    <task id="LOCAL-00001" summary="melhoria colocando o fbclient e o ini json nas pastas do sistema">
+      <option name="closed" value="true" />
+      <created>1703007411495</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1703007411495</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="melhoria colocando o fbclient e o ini json nas pastas do sistema" />
+    <option name="LAST_COMMIT_MESSAGE" value="melhoria colocando o fbclient e o ini json nas pastas do sistema" />
   </component>
 </project>

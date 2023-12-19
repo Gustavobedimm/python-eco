@@ -9,8 +9,7 @@ class Eventos:
         if con is False:
             return False
         else:
-            select = 'select tbn.nsu, evento.tipoevento from NFE_TBNFECONSNFEDESTNFE tbn inner join nfe_tbevento evento on evento.chavenfe = tbn.chavenfe where tbn.nsu = ' + nsu
-            #print(select)
+            select = 'select tbn.nsu,evento.tipoevento,evento.xmotivo,evento.numeroprotocolo,evento.datahoraregistro from NFE_TBNFECONSNFEDESTNFE tbn inner join nfe_tbevento evento on evento.chavenfe = tbn.chavenfe where tbn.nsu = ' + nsu
             aux = con.cursor()
             aux.execute(select)
             empresaSQL = aux.fetchall()

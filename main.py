@@ -1,4 +1,6 @@
-
+#gerar exe do projeto
+#pip install PyInstaller
+#pyinstaller Main.py
 from SemManifestoDAO import SemManifesto
 from EventosDAO import Eventos
 import json
@@ -23,16 +25,21 @@ while opcao != "0":
                 if len(evento) == 0:
                     if string_ciencia == "-1":
                         print("----------------------------------------------------------------------------------------------------------------------------------")
-                        print("❌ERRO : NSU : ",string_nsu, " Ciencia : ", string_ciencia, " - Não foi encontrado o evento de Ciencia da operação na tabela NFE_TBEVENTO para este documento.")
+                        print("ERRO : NSU : ",string_nsu, " Ciencia : ", string_ciencia, " - Não foi encontrado o evento de Ciencia da operação na tabela NFE_TBEVENTO para este documento.")
                         print("----------------------------------------------------------------------------------------------------------------------------------")
                         possuiErro = True
                 else:
                     if ciencia is None:
                         possuiErro = True
                         print("----------------------------------------------------------------------------------------------------------------------------------")
-                        print("❌ERRO : NSU : ",string_nsu, " Ciencia : ", string_ciencia, " - Foi encontrado um evento na tabela NFE_TBEVENTO para este documento.")
+                        print("ATENÇÃO - Foi encontrado um evento na tabela NFE_TBEVENTO para este documento.")
+                        print("NFE_TBNFESEMMANIFEST")
+                        if string_ciencia == '-1':
+                            print("Nsu:", string_nsu, "Ciencia:", string_ciencia, "***Possui ciencia da operação")
+                        else:
+                            print("Nsu:", string_nsu, "Ciencia:", string_ciencia,"***Ainda não possui ciencia da operação")
                         for i in evento:
-                            nsu, tipoevento = i
+                            nsu,tipoevento,xmotivo,numeroprotocolo,datahoraregistro = i
                             string_tipoevento = str(tipoevento)
                             string_nome_evento = ""
                             if string_tipoevento == "210210":
@@ -43,15 +50,14 @@ while opcao != "0":
                                 string_nome_evento = "Desconhecimento da Operação"
                             if string_tipoevento == "210240  ":
                                 string_nome_evento = "Operação não Realizada"
-                            print("NSU : ",nsu,"Tipo Evento : ", tipoevento,"-",string_nome_evento)
-                        print("Altere o campo ciencia deste documento para -1 na tabela nfe_tbnfesemmanifest")
-                        print("update nfe_tbnfesemmanifest smanif set smanif.ciencia = '-1' where smanif.nsu = " + str(nsu))
+                            print("NFE_TBEVENTO")
+                            print("NSU : ",nsu,"Tipo Evento : ", tipoevento,"-",string_nome_evento,"- Motivo :",xmotivo,"- Protocolo :",numeroprotocolo,"- Data Registro:",datahoraregistro)
+                            if numeroprotocolo is None:
+                                print("Provavelmente o evento não foi protocolado")
                         print("----------------------------------------------------------------------------------------------------------------------------------")
         if possuiErro is False:
-            print("--------------------------------------")
-            print("Não encontrei nenhum erro! ✅")
+            print("***Não encontrei nenhum erro! ")
             print(path_econfe)
-            path_econfe
-            print("--------------------------------------")
+
 print("Sistema finalizado.")
 exit()
