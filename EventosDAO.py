@@ -1,10 +1,11 @@
 from Conexao import Conexao
 
 listaNotas = []
-con = Conexao.conecta()
+
 class Eventos:
     @staticmethod
-    def consultaEvento(nsu):
+    def consultaEvento(nsu,path_econfe):
+        con = Conexao.conecta(path_econfe)
         if con is False:
             return False
         else:
