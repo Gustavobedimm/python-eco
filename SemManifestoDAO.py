@@ -2,14 +2,13 @@ from Conexao import Conexao
 
 listaNotas = []
 con = Conexao.conecta()
-class TgereventomanifdestDAO:
+class SemManifesto:
     @staticmethod
-    def buscaNF(nsu):
+    def buscaNFSemManif():
         if con is False:
-            print("erro na conexao")
             return False
         else:
-            select = "select nsu,tipo from tgereventomanifdest tger"
+            select = "select nsu,ciencia from nfe_tbnfesemmanifest tbn"
             aux = con.cursor()
             aux.execute(select)
             empresaSQL = aux.fetchall()

@@ -6,10 +6,9 @@ class Conexao:
         try:
             global con
             con = fdb.connect(
-                host='localhost', database='C:/ecosis/dados/ecodados.eco',
+                host='localhost', database='C:/ecosis/dados/econfe.eco',
                 user='sysdba', password='masterkey'
             )
-            print("conectado com sucessos")
             return con
         except:
             print("erro de conexao")
